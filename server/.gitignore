@@ -1,0 +1,3 @@
+*.db
+out
+node_modules

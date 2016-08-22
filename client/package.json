@@ -1,0 +1,56 @@
+{
+	"name": "language-client-noxscript",
+    "displayName": "NoxScript 3.0",
+	"description": "VSCode part of a language server",
+	"license": "MIT",
+	"version": "0.0.1",
+	"publisher": "noxtools",
+	"engines": {
+		"vscode": "^1.4.0"
+	},
+	"categories": [
+		"Languages"
+	],
+	"activationEvents": [
+		"onLanguage:ns"
+	],
+	"main": "./out/src/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ns.compile",
+				"title": "Nox Script: Compile"
+			}
+		],
+		"languages": [{
+            "id": "ns",
+            "aliases": ["Nox Script 3.0", "ns"],
+            "extensions": [".ns"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ns",
+            "scopeName": "source.ns",
+            "path": "./syntaxes/noxscript.tmLanguage"
+        }],
+		"keybindings": [
+			{
+				"command": "ns.compile",
+				"key": "F5"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+		"compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+
+	},
+	"devDependencies": {
+		"typescript": "^1.8.9",
+		"vscode": "^0.11.0"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^2.4.2"
+	}
+}

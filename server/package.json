@@ -1,0 +1,19 @@
+{
+	"name": "language-server-noxscript",
+	"description": "NoxScript language server",
+	"version": "0.0.1",
+	"license": "MIT",
+	"engines": {
+		"node": "*"
+	},
+	"dependencies": {
+		"vscode-languageserver": "^2.2.1"
+	},
+	"devDependencies": {
+		"typescript": "^1.8.9"
+	},
+	"scripts": {
+		"compile": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc -p .",
+		"watch": "installServerIntoExtension ../client ./package.json ./tsconfig.json && tsc --watch -p ."
+	}
+}
