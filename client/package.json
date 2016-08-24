@@ -3,7 +3,7 @@
     "displayName": "NoxScript 3.0",
 	"description": "VSCode part of a language server",
 	"license": "MIT",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"publisher": "noxtools",
 	"engines": {
 		"vscode": "^1.4.0"
